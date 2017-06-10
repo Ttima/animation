@@ -1,0 +1,40 @@
+html, body{
+  background: #00FA9A;
+}
+.container{
+  width: 900px;
+  margin: auto;
+  margin-top: 15%;
+  text-align: center;
+}
+.card-container {
+  display: inline-block;
+  width: 200px;
+  height: 250px;
+  perspective: 600;
+  position: relative;
+}
+
+.card {
+  height: 200px;
+  width: 150px;
+  margin-top: 25px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 3s ease-in-out;
+  border: 1px solid #fff;
+  
+}
+.card:hover {
+  transform: rotateY(360deg);
+  cursor: pointer;
+}
+.card .side {
+  backface-visibility: hidden;
+  height: 200px;
+  position: absolute;
+  width: 150px;
+}
+.card .back {
+  transform: rotateY(180deg);
+}
